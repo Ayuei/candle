@@ -94,4 +94,8 @@ impl VarBuilder {
     pub fn contains_key(&self, key: &str) -> bool {
         self.data.contains_key(key)
     }
+
+    pub fn keys(&self) -> Vec<String> {
+        self.data.keys().collect()
+    }
 }
