@@ -4,7 +4,7 @@ use std::sync::Arc;
 
 // VarBuilder specialized for QTensors
 pub struct VarBuilder {
-    data: Arc<std::collections::HashMap<String, Arc<QTensor>>>,
+    pub data: Arc<std::collections::HashMap<String, Arc<QTensor>>>,
     path: Vec<String>,
     device: Device,
 }
@@ -95,7 +95,4 @@ impl VarBuilder {
         self.data.contains_key(key)
     }
 
-    pub fn keys(&self) -> Vec<String> {
-        self.data.keys().collect()
-    }
 }
